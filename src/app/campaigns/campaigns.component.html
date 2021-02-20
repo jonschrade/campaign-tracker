@@ -1,0 +1,7 @@
+<h2>My Campaigns</h2>
+<ul class="campaigns">
+    <li *ngFor="let campaign of campaigns" (click)="onSelect(campaign)" [class.selected]="campaign === selectedCampaign">
+        <span class="badge">{{campaign.id}}</span> {{campaign.name}}
+    </li>
+</ul>
+<app-campaign-detail [campaign]="selectedCampaign"></app-campaign-detail>
